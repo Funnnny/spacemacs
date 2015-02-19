@@ -3,6 +3,7 @@
     company
     company-tern
     company-c-headers
+    company-quickhelp
     ))
 
 (defvar company-mode-excluded-packages
@@ -69,3 +70,11 @@ so that you don't have 'do' completed to 'downcase' in Ruby"
     :defer t
     :init
     (add-to-list 'company-backends (company-mode/backend-with-yas 'company-tern))))
+
+(defun company-mode/init-company-quickhelp ()
+  (use-package company-quickhelp
+    :defer t
+    :init
+    (progn
+      (when (display-graphic-p) (company-quickhelp-mode 1)))))
+    
