@@ -41,8 +41,6 @@ which require an initialization must be listed explicitly in the list.")
                      (require 'semantic)
                      (add-to-list 'semantic-default-submodes
                                   'global-semantic-stickyfunc-mode)
-                     (add-to-list 'semantic-default-submodes
-                                  'global-semantic-idle-summary-mode)
                      (semantic-mode 1)))))
 
 (defun semantic/init-semantic ()
