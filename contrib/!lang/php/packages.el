@@ -44,9 +44,6 @@
   (use-package php-auto-yasnippets
     :defer t))
 
-(defun php/init-php-extras ()
-  (use-package php-extras
-    :defer t))
 
 (defun php/init-php-mode ()
   (use-package php-mode
