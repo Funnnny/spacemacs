@@ -144,7 +144,10 @@
   (add-hook 'c++-mode-hook 'ycmd-mode)
   (evil-leader/set-key-for-mode 'c++-mode
     "mgg" 'ycmd-goto
-    "mgG" 'ycmd-goto-imprecise))
+    "mgG" 'ycmd-goto-imprecise)
+(evil-leader/set-key-for-mode 'c-mode
+  "mgg" 'ycmd-goto
+  "mgG" 'ycmd-goto-imprecise))
 
 (defun c-c++/post-init-company-ycmd ()
   (push 'company-ycmd company-backends-c-mode-common))
